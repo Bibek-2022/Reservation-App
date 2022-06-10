@@ -1,5 +1,6 @@
 import React from "react";
-import { Header } from "../../components/header/Header";
+import Header from "../../components/header/Header";
+
 import "./navbar.css";
 
 export const Navbar = () => {
@@ -11,7 +12,6 @@ export const Navbar = () => {
           <button className="navButton">Register</button>
           <button className="navButton">Login</button>
         </div>
-        <Header />
       </div>
     </div>
   );
