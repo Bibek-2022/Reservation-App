@@ -20,10 +20,16 @@
 
 .mailInputContainer > button {
   height: 50px;
-  background-color: #003580;
-  color: white;
-  font-weight: 500;
+  background-color: white;
+  color: #003580;
+  font-weight: bolder;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.mailInputContainer > button:hover {
+  background-color: #003580;
+  border: 2px solid white;
+  color: white;
 }
