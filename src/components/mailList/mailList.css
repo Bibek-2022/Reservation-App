@@ -7,4 +7,23 @@
   display: flex;
   gap: 20px;
   align-items: center;
+  padding: 50px;
+}
+
+.mailInputContainer > input {
+  width: 300px;
+  height: 30px;
+  padding: 10px;
+  border: none;
+  margin-right: 10px;
+}
+
+.mailInputContainer > button {
+  height: 50px;
+  background-color: #003580;
+  color: white;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
