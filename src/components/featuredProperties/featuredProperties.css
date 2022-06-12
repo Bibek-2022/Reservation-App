@@ -9,8 +9,41 @@
 .fpItem {
   flex: 1;
   gap: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .fpImg {
   width: 100%;
+}
+
+.fpName {
+  font-weight: bold;
+}
+
+.fpCity {
+  font-weight: 300;
+}
+.fpPrice {
+  font-weight: 500;
+}
+
+.fpRating > button {
+  background-color: #003500;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #ffc107;
+  color: white;
+  font-weight: bold;
+}
+
+.fpRating > button:hover {
+  background-color: #ffc107;
+  color: #003500;
+}
+
+.fpRating > span {
+  font-size: 1.5rem;
 }
