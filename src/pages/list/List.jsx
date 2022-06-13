@@ -6,6 +6,7 @@ import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import { format, setDate } from "date-fns";
 import { DateRange } from "react-date-range";
+import { SearchItem } from "../../components/searchItem/SearchItem";
 
 export const List = () => {
   const location = useLocation();
@@ -13,19 +14,21 @@ export const List = () => {
   const [date, setDate] = useState(location.state.date);
   const [openDate, setOpenDate] = useState(false);
   const [options, setOptions] = useState(location.state.options);
+
   return (
     <div>
-      <Navbar /> <Header type="list" />
+      <Navbar />
+      <Header type="list" />
       <div className="listContainer">
         <div className="listWrapper">
           <div className="listSearch">
-            <div className="lsTitle">Search</div>
+            <h1 className="lsTitle">Search</h1>
             <div className="lsItem">
               <label>Destination</label>
-              <input type="text" placeholder="Destination" />
+              <input placeholder={destination} type="text" />
             </div>
             <div className="lsItem">
-              <label>Check-In Date</label>
+              <label>Check-in Date</label>
               <span onClick={() => setOpenDate(!openDate)}>{`${format(
                 date[0].startDate,
                 "MM/dd/yyyy"
@@ -42,53 +45,59 @@ export const List = () => {
               <label>Options</label>
               <div className="lsOptions">
                 <div className="lsOptionItem">
-                  <span className="lsOPtionText">
-                    Min Price <small>per night</small>
+                  <span className="lsOptionText">
+                    Min price <small>per night</small>
                   </span>
-                  <input type="text" className="lsOptionInput" />
+                  <input type="number" className="lsOptionInput" />
                 </div>
                 <div className="lsOptionItem">
-                  <span className="lsOPtionText">
-                    Max Price <small>per night</small>
+                  <span className="lsOptionText">
+                    Max price <small>per night</small>
                   </span>
-                  <input type="text" className="lsOptionInput" />
+                  <input type="number" className="lsOptionInput" />
                 </div>
                 <div className="lsOptionItem">
-                  <span className="lsOPtionText">
-                    Min Price <small>per night</small>
-                  </span>
+                  <span className="lsOptionText">Adult</span>
                   <input
-                    type="text"
-                    className="lsOptionInput"
-                    placeholder={options.adult}
-                  />
-                </div>
-                <div className="lsOptionItem">
-                  <span className="lsOPtionText">Adult</span>
-                  <input
-                    type="text"
+                    type="number"
                     min={1}
                     className="lsOptionInput"
                     placeholder={options.adult}
                   />
                 </div>
                 <div className="lsOptionItem">
-                  <span className="lsOPtionText">Children</span>
+                  <span className="lsOptionText">Children</span>
                   <input
-                    type="text"
+                    type="number"
                     min={0}
                     className="lsOptionInput"
                     placeholder={options.children}
                   />
                 </div>
                 <div className="lsOptionItem">
-                  <span className="lsOPtionText">Room</span>
-                  <input type="text" className="lsOptionInput" min={1} />
+                  <span className="lsOptionText">Room</span>
+                  <input
+                    type="number"
+                    min={1}
+                    className="lsOptionInput"
+                    placeholder={options.room}
+                  />
                 </div>
               </div>
             </div>
+            <button>Search</button>
           </div>
-          <div className="listResult"></div>
+          <div className="listResult">
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+          </div>
         </div>
       </div>
     </div>
