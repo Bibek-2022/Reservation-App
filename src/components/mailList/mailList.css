@@ -1,7 +1,7 @@
 .mail {
   width: 100%;
   margin-top: 50px;
-  background-color: #003580;
+  background-color: #2b6777;
   color: white;
   flex-direction: column;
   display: flex;
@@ -15,21 +15,17 @@
   height: 30px;
   padding: 10px;
   border: none;
+  border-radius: 2px 2px 2px 2px;
   margin-right: 10px;
 }
 
 .mailInputContainer > button {
   height: 50px;
-  background-color: white;
-  color: #003580;
+  background-color: #2b6777;
+
+  color: white;
   font-weight: bolder;
-  border: none;
+  border: 1px solid white;
   border-radius: 5px;
   cursor: pointer;
-}
-
-.mailInputContainer > button:hover {
-  background-color: #003580;
-  border: 2px solid white;
-  color: white;
 }

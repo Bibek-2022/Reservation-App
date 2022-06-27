@@ -1,15 +1,17 @@
 .navbar {
   height: 50px;
-  background-color: #0b045e;
+  color: #06313d;
   display: flex;
   justify-content: center;
+  font-weight: bolder;
 }
 
 .navContainer {
   width: 100%;
   max-width: 1024px;
   /* background-color: #f8f8f8; */
-  color: white;
+  /* color: white; */
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -23,5 +25,5 @@
   margin-left: 20px;
   border: none;
   padding: 5px 10px;
-  color: #0b045e;
+  color: #06313d;
 }

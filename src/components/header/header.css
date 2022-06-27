@@ -1,5 +1,5 @@
 .header {
-  background-color: #003580;
+  background-color: #2b6777;
   color: white;
   display: flex;
   justify-content: center;
@@ -39,10 +39,11 @@
 }
 
 .headerBtn {
-  background-color: #0071c2;
+  background-color: #06313d;
   color: white;
   font-weight: 500;
   border: none;
+  border-radius: 2px 2px 2px 2px;
   padding: 10px;
   cursor: pointer;
 }
@@ -50,7 +51,7 @@
 .headerSearch {
   height: 30px;
   background-color: white;
-  border: 3px solid #febb02;
+  border: 3px solid #c0d4d9;
   display: flex;
   align-items: center;
   justify-content: space-around;
