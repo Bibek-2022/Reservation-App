@@ -27,11 +27,20 @@ app.use(express.json());
 app.use("/api/auth", authRoute);
 app.use("/api/users", usersRoute);
 app.use("/api/hotels", hotelsRoute);
-// app.use("/rooms", roomRoute);
+app.use("/rooms", roomsRoute);
 
-app.get("/", (req, res) => {
-  res.send("Hello ");
+// error handling if we have error in any of the middleware
+app.get("/", (err, req, res, next) => {
+  const errorStatus = err.status || 500;
+  const errorMessage = err.message || 500;
+  return res.status(errorStatus).json({
+    success: false,
+    status: errorStatus,
+    message: errorMessage,
+    stack: er.stack,
+  });
 });
+
 app.listen(8000, () => {
   connect();
   console.log("Connected to backend");
