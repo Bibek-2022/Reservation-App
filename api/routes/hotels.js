@@ -50,6 +50,8 @@ router.get("/:id", async (req, res) => {
 });
 // ALL
 router.get("/", async (req, res, next) => {
+  // const failed = true;
+  // if (failed) return next(createError(500, "Something went wrong"));
   try {
     const hotels = await Hotel.find(req.params.id);
     res.status(200).json(hotels);
