@@ -22,9 +22,11 @@ mongoose.connection.on("disconnected", () => {
 });
 
 // middlewares
-app.use("/auth", authRoute);
-app.use("/users", usersRoute);
-app.use("/hotels", hotelsRoute);
+app.use(express.json());
+
+app.use("/api/auth", authRoute);
+app.use("/api/users", usersRoute);
+app.use("/api/hotels", hotelsRoute);
 // app.use("/rooms", roomRoute);
 
 app.get("/", (req, res) => {
@@ -32,5 +34,5 @@ app.get("/", (req, res) => {
 });
 app.listen(8000, () => {
   connect();
-  console.log("Connected to backedn");
+  console.log("Connected to backend");
 });

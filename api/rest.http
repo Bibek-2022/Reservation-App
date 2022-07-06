@@ -1,14 +1,15 @@
-POST http:/localhost:8000/api/hotels 
+POST  http://localhost:8000/api/hotels
 Content-Type: application/json
+
 {
-    "name":"asdf",
+    "name":"Bibek",
     "type":"hotel",
     "city":"asdf",
     "address":"asdf",
     "distance":"asdf",
     "title":"asdf",
     "desc":"asdf",
-    "cheapestPrice":122,
+    "cheapestPrice":122
   
 }
 
