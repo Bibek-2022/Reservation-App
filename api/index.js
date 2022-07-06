@@ -25,7 +25,7 @@ mongoose.connection.on("disconnected", () => {
 app.use("/auth", authRoute);
 app.use("/users", usersRoute);
 app.use("/hotels", hotelsRoute);
-app.use("/rooms", roomRoute);
+// app.use("/rooms", roomRoute);
 
 app.get("/", (req, res) => {
   res.send("Hello ");
