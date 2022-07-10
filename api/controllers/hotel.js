@@ -21,7 +21,7 @@ export const updateHotel = async (res, req, next) => {
     const savedHotel = await newHotel.save();
     res.status(200).json(saveHotel);
   } catch (error) {
-    res.status(500).json(error);
+    next(error)
   }
 };
 // delete

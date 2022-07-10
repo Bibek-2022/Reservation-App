@@ -13,4 +13,12 @@ Content-Type: application/json
   
 }
 
+POST  http://localhost:8000/api/auth/register
+Content-Type: application/json
+
+{ 
+    "username":"Bibek",
+    "email":"hotel",
+    "password":"asdf"
+}
 
