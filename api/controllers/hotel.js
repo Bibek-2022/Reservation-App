@@ -1,3 +1,4 @@
+import Hotel from "../models/Hotel.js";
 export const createHotel = async (res, req, next) => {
   const newHotel = new Hotel(req.body);
   try {
@@ -21,7 +22,7 @@ export const updateHotel = async (res, req, next) => {
     const savedHotel = await newHotel.save();
     res.status(200).json(saveHotel);
   } catch (error) {
-    next(error)
+    next(error);
   }
 };
 // delete
