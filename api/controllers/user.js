@@ -1,4 +1,5 @@
 import User from "../models/User.js";
+import { createError } from "../utils/error.js";
 // update
 export const updateUser = async (res, req, next) => {
   const updatedUser = new User.findByIdAndUpdate(
