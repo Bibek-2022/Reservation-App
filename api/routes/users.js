@@ -11,7 +11,9 @@ const router = express.Router();
 router.get("/checkauthentication", verifyToken, (req, res, next) => {
   res.send("Hello user, you are in");
 });
-
+router.get("/checkuser/:id", verifyToken, (req, res, next) => {
+  res.send("Hello user, you are in");
+});
 // UPDATE
 router.put("/:id", updateUser);
 // DELETE
